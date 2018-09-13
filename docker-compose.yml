@@ -1,0 +1,9 @@
+version: '2'
+services:
+  php:
+    container_name: search_php
+    build:
+      context: docker/php7-fpm
+    volumes:
+      - .:/var/www/search
+      - ./docker/php7-fpm/php.ini:/usr/local/etc/php/php.ini
